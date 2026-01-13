@@ -1,0 +1,33 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environnements virtuels
+venv/
+.venv/
+env/
+.env/
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+
+# Sorties générées
+*.log
+
+# =========================
+# Données / résultats
+# =========================
+data/
+outputs/
+results/
+*.csv
+*.tsv
+*.parquet
+*.jsonl
+
+# =======
