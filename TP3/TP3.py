@@ -358,10 +358,33 @@ def get_score_for_all_url(query: str, documents: list):
     return scores
 
 
+def write_jsonl(final_result: list):
+
+    with open("output.jsonl", "w", encoding="utf-8") as f:
+        for item in final_result:
+            f.write(json.dumps(item, ensure_ascii=False))
+            f.write("\n")
+
+
 query = "Energy drink"
 
 data = get_score_for_all_url(query=query, documents=documents)
 
 sorted_urls = sorted(data, key=data.get, reverse=True)
 
-print(sorted_urls)
+
+def filter_and_preserve_order(documents: list, ordered_urls: list):
+
+    lookup = {item["url"]: item for item in documents}
+
+    result = []
+    for url in ordered_urls:
+        if url in lookup:
+            result.append(lookup[url])
+
+    return result
+
+
+filtered = filter_and_preserve_order(documents, sorted_urls)
+
+write_jsonl(filtered)

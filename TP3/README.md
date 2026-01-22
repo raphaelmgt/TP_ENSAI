@@ -5,6 +5,14 @@
 ---
 
 
+## Description globale
+
+Tout comme le TP 2, on retrouve ici deux fichiers :
+    - un notebook `TP.ipynb`,
+    - et un fichier python `TP3.py`
+
+Le notebook représente simplement la base que j'ai utiliser pour tester mon code au fur et à mesure de la rédaction. Les deux fichiers ont globalement le même contenu. 
+
 ## 📦 Prérequis
 
 - unicodedata
@@ -25,3 +33,8 @@ Signaux considérés:
     - Les reviews : Je n'ai considéré que la note moyenne et la dernière note reçue pour chaque page. La quasi totalité des document comporte entre 4 et 5 avis. J'ai donc considéré le nombre total de review comme non pertinent dans ce cas.
 
 Point négatif : Je n'ai malheureusement pas réussi à implémenter la fonction qui calcule le score BM25 à partir de la fonction BM25Okapi à partir de la librairie rank_bm25.
+
+
+## Comment lancer le code sur une query donnée ?
+
+Pour cela, il suffit de modifier la query ligne 369 et de lancer le fichier python.
